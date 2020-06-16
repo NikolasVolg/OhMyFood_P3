@@ -1,0 +1,31 @@
+{
+  "name": "ohmyfood_p3",
+  "version": "0.1.0",
+  "description": "project openclassroom",
+  "main": "",
+  "scripts": {
+    "build:scss": "./node_modules/gulp-cli/bin/gulp.js styles",
+    "dev:scss:watch": "./node_modules/gulp-cli/bin/gulp.js watch:style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolasVolg/OhMyFood_P3.git"
+  },
+  "keywords": [
+    "scss",
+    "style",
+    "front"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolasVolg/OhMyFood_P3/issues"
+  },
+  "homepage": "https://github.com/NikolasVolg/OhMyFood_P3#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
