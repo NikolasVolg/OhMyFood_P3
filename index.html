@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>OhMyFood</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>OhMyFood</title>
 </head>
+
+
 
 <body>
 
@@ -15,46 +20,62 @@
         <h1><a href="index.html">ohmyfood</a></h1>
     </header>
 
-    <div id="conteneur">
-
-        <div class="tesseract note">
-            <a href="lanote.html">
-                <p>La note enchantée</p>
-                <p>MENU</p>
-            </a>
-        </div>
-
-        <div class="tesseract chic">
-            <a href="lechic.html">
-                <p>Le chic à la française</p>
-                <p>MENU</p>
-            </a>
-        </div>
-
-        <div class="tesseract delice">
-            <a href="delice.html">
-                <p>Le délice des papilles</p>
-                <p>MENU</p>
-            </a>
-        </div>
-
-        <div class="tesseract palette">
-            <a href="lapalette.html">
-                <p>La palette du goût</p>
-                <p>MENU</p>
-            </a>
-        </div>
-
-        <div id="soon">
-            <p>Prochainement</p>
-            <p>...</p>
-        </div>
-
+    <div class="landscape">
+        <p>Pour profiter au mieux de l'expérience OhMyFood, veuillez remettre votre appareil en <strong>format portrait</strong>.</p>
+        <p>Merci !</p>
     </div>
 
+    <section class="main">
+
+        <div class="conteneur">
+
+            <div class="tesseract">
+                <a href="lanote.html">
+                    <i class="fab fa-itunes-note"></i>
+                    <p class="bloc-menu-note">La note enchantée</p>
+                    <p class="bloc-menu-note--modif">menu</p>
+                </a>
+            </div>
+
+            <div class="tesseract tesseract__chic">
+                <a href="lechic.html">
+                    <p>Le chic à la française</p>
+                    <p>Menu</p>
+                </a>
+            </div>
+
+            <div class="tesseract tesseract__delice">
+                <a href="delice.html">
+                    <p>Le délice des papilles</p>
+                    <p>Menu</p>
+                </a>
+            </div>
+
+            <div class="tesseract tesseract__palette">
+                <a href="lapalette.html">
+                    <p>La palette du goût</p>
+                    <p>Menu</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="soon">
+            <p>Prochainement
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+
+        </div>
+
+    </section>
+
+
     <footer>
-        <a href="#" class="vibreur">Mentions légales</a>
-        <a href="#" class="vibreur">Contactez-nous</a>
+        <a href="mentionslegales.html" class="vibreur">Mentions légales</a>
+        <a href="mailto:#" class="vibreur">Contactez-nous</a>
     </footer>
 
 </body>
