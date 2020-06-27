@@ -1,0 +1,123 @@
+$color-primary: #579c87;
+$text-color: #fdcb46;
+$color-box-shadow: #E0E0E0;
+//---menu note
+$color-note:#fcdfdb;
+$color-text-note: #3d1319;
+$leftcolor: #f15d61;
+$rightcolor: #f6916a;
+//---chic
+$color-chic:#fff5fe;
+$chic-left: #e38a12;
+$chic-right: #9056ff;
+$menu-chic-colortext: #c77412;
+//---delice
+$color-delice: #f9f9f9;
+//---palette
+$color-palette:#fdfffd;
+//----------------------------------------Map
+$color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
+//-----------------mixin
+//dégradé note
+@mixin degrade-note {
+    background: linear-gradient(to right, $leftcolor, $rightcolor);
+    color: transparent;
+    background-clip: text;
+}
+
+@mixin degrade-chic {
+    background: linear-gradient(135deg, $chic-left 0%, chic-right 71%);
+    color: transparent;
+    background-clip: text;
+}
+
+@mixin min-reset {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin display-fullcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin header {
+    height: 110px;
+    background-color: $color-primary;
+    @include display-fullcenter;
+}
+
+@mixin AnimUnder {
+    display: inline;
+    padding-bottom: 3px;
+    background: linear-gradient(to top, $color-text-note 0%, $color-text-note 2px, transparent 1px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.6s ease-in-out;
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+@mixin footer {
+    height: 70px;
+    width: 100vw;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+@mixin footer-a {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $text-color;
+    text-decoration: none;
+    padding: 0 25px 0 25px;
+}
+
+@mixin h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 4rem;
+    letter-spacing: -6px;
+    color: $text-color;
+    text-decoration: none;
+}
+
+@mixin tesseract {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 305px;
+    width: 220px;
+    box-shadow: 0px 0px 10px 3px $color-box-shadow;
+    margin: 20px;
+    background: $color-note;
+}
+
+@mixin menu {
+    background: $color-note;
+    color: $color-text-note;
+    text-align: center;
+    margin: 30px 0 30px;
+    padding: 0 15px 0 15px;
+    p,
+    h3 {
+        font-family: 'Heart-Warning';
+    }
+}
+
+//-----animation
+@mixin trans-zoom {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.4s, opacity 0.4s;
+    &:hover {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}

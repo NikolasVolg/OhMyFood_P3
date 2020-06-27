@@ -1,0 +1,12 @@
+@import "Base/base";
+@import "Utils/mixin-variables";
+@import "Utils/keyframes";
+@import "Layouts/header-footer";
+@import "Layouts/encarts-menu";
+@import "Pages/lanote";
+@import "Components/button";
+@import "Pages/mentions";
+// -----------------------Layouts
+.landscape {
+    display: none;
+}

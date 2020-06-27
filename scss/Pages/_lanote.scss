@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-note {
+    @include menu;
+    .titre {
+        font-family: 'Devonshire-regular';
+        font-size: 2em;
+        &--pluspetit {
+            font-family: 'Devonshire-regular';
+            font-size: 2em;
+        }
+    }
+    h3 {
+        @include AnimUnder;
+    }
+}
+
+.prix {
+    font-weight: bold;
+}

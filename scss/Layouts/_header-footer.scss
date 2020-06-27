@@ -1,0 +1,19 @@
+html,
+body {
+    @include min-reset;
+}
+
+header {
+    @include header;
+}
+
+h1 a {
+    @include h1;
+}
+
+footer {
+    @include footer;
+    a {
+        @include footer-a;
+    }
+}
