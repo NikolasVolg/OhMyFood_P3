@@ -5,12 +5,10 @@
     background-color: $color-primary;
     border-radius: 10px;
     margin-bottom: 100px;
-    &__menu {
-        opacity: 1;
-        transition: opacity 0.6s;
-        &:hover {
-            opacity: 0.8;
-        }
+    opacity: 1;
+    transition: opacity 0.6s;
+    &:hover {
+        opacity: 0.8;
     }
     p,
     a {

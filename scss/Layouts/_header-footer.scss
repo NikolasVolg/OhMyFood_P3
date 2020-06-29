@@ -5,10 +5,12 @@ body {
 
 header {
     @include header;
-}
-
-h1 a {
-    @include h1;
+    h1 {
+        @include h1;
+        >a {
+            @include h1;
+        }
+    }
 }
 
 footer {

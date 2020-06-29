@@ -1,24 +1,33 @@
 $color-primary: #579c87;
 $text-color: #fdcb46;
-$color-box-shadow: #E0E0E0;
-//---menu note
+$color-box-shadow: #c2c0c0;
+//-----------------------menu note
 $color-note:#fcdfdb;
 $color-text-note: #3d1319;
 $leftcolor: #f15d61;
 $rightcolor: #f6916a;
-//---chic
+//-----------------------chic
 $color-chic:#fff5fe;
 $chic-left: #e38a12;
 $chic-right: #9056ff;
 $menu-chic-colortext: #c77412;
-//---delice
+$menu-chic-colortext2: #a56899;
+$menu-chic-colortext3: #6e4ccc;
+//-----------------------delice
+$color-black: black;
 $color-delice: #f9f9f9;
-//---palette
+$delice-left: #0229dd;
+$delice-right: #0e8cfb;
+$menu-delice-colortext: #0887fb;
+//-----------------------palette
 $color-palette:#fdfffd;
-//----------------------------------------Map
+$palette-left: #3e923a;
+$palette-right: #beff7f;
+$menu-palette-colortext: #72bf56;
+//-----------------------Map-get
 $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
-//-----------------mixin
-//dégradé note
+//-----------------MIXIN
+//--dégradés de texte
 @mixin degrade-note {
     background: linear-gradient(to right, $leftcolor, $rightcolor);
     color: transparent;
@@ -26,7 +35,19 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
 }
 
 @mixin degrade-chic {
-    background: linear-gradient(135deg, $chic-left 0%, chic-right 71%);
+    background: linear-gradient(135deg, $chic-left 0%, $chic-right 71%);
+    color: transparent;
+    background-clip: text;
+}
+
+@mixin degrade-delice {
+    background: linear-gradient(135deg, $delice-left 0%, $delice-right 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+@mixin degrade-palette {
+    background: linear-gradient(135deg, $palette-left 0%, $palette-right 100%);
     color: transparent;
     background-clip: text;
 }
@@ -49,15 +70,12 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     @include display-fullcenter;
 }
 
-@mixin AnimUnder {
-    display: inline;
-    padding-bottom: 3px;
-    background: linear-gradient(to top, $color-text-note 0%, $color-text-note 2px, transparent 1px) no-repeat;
-    background-size: 0 100%;
-    transition: background-size 0.6s ease-in-out;
-    &:hover {
-        background-size: 100% 100%;
-    }
+@mixin h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 4rem;
+    letter-spacing: -6px;
+    color: $text-color;
+    text-decoration: none;
 }
 
 @mixin footer {
@@ -80,12 +98,14 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     padding: 0 25px 0 25px;
 }
 
-@mixin h1 {
-    font-family: 'Archivo', sans-serif;
-    font-size: 4rem;
-    letter-spacing: -6px;
-    color: $text-color;
-    text-decoration: none;
+@mixin boxshadow {
+    box-shadow: 0px 0px 10px 3px $color-box-shadow;
+}
+
+@mixin section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @mixin tesseract {
@@ -94,20 +114,44 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     justify-content: center;
     height: 305px;
     width: 220px;
-    box-shadow: 0px 0px 10px 3px $color-box-shadow;
     margin: 20px;
     background: $color-note;
+    @include boxshadow;
+    @media screen and(min-width: 1024px) {
+        height: 366px;
+        width: 264px;
+    }
 }
 
-@mixin menu {
-    background: $color-note;
-    color: $color-text-note;
+@mixin menu ($colour-bgd: #eee) {
+    background: $colour-bgd;
     text-align: center;
     margin: 30px 0 30px;
     padding: 0 15px 0 15px;
     p,
     h3 {
         font-family: 'Heart-Warning';
+    }
+    .prix {
+        font-weight: bold;
+    }
+    @media screen and (min-width: 768px) {
+        @include boxshadow;
+        padding: 0 65px 0 65px;
+        .plat {
+            display: flex;
+            justify-content: flex-start;
+            margin-right: 50px
+        }
+        .prix {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -35px;
+            padding-bottom: 20px;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 0 100px 0 100px;
     }
 }
 
@@ -119,5 +163,16 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     &:hover {
         transform: scale(1.2);
         opacity: 0.6;
+    }
+}
+
+@mixin Under ($color: $color-text-note) {
+    display: inline-block;
+    padding-bottom: 3px;
+    background: linear-gradient(to top, $color 0%, $color 2px, transparent 1px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.6s ease-in-out;
+    &:hover {
+        background-size: 100% 100%;
     }
 }

@@ -79,7 +79,15 @@ header {
   align-items: center;
 }
 
-h1 a {
+header h1 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 4rem;
+  letter-spacing: -6px;
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+header h1 > a {
   font-family: 'Archivo', sans-serif;
   font-size: 4rem;
   letter-spacing: -6px;
@@ -113,15 +121,36 @@ footer a {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .conteneur {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .conteneur {
+    width: 900px;
+  }
+}
+
 .tesseract {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 305px;
   width: 220px;
-  box-shadow: 0px 0px 10px 3px #E0E0E0;
   margin: 20px;
   background: #fcdfdb;
+  box-shadow: 0px 0px 10px 3px #c2c0c0;
+}
+
+@media screen and (min-width: 1024px) {
+  .tesseract {
+    height: 366px;
+    width: 264px;
+  }
 }
 
 .tesseract__chic {
@@ -129,7 +158,7 @@ footer a {
 }
 
 .tesseract__chic a > p:nth-child(1) {
-  background: linear-gradient(135deg, #e38a12 0%, chic-right 71%);
+  background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%);
   color: transparent;
   background-clip: text;
   font-family: 'CroissantOne-Regular';
@@ -145,12 +174,16 @@ footer a {
 }
 
 .tesseract__delice a > p:nth-child(1) {
+  background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%);
+  color: transparent;
+  background-clip: text;
   font-family: 'DancingScript';
   font-size: 1.5em;
 }
 
 .tesseract__delice a > p:nth-child(2) {
   font-family: 'SweetyStrawberry';
+  color: #0887fb;
 }
 
 .tesseract__palette {
@@ -158,12 +191,16 @@ footer a {
 }
 
 .tesseract__palette a > p:nth-child(1) {
+  background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%);
+  color: transparent;
+  background-clip: text;
   font-family: 'KaushanScript-Regular';
   font-size: 1.5em;
 }
 
 .tesseract__palette a > p:nth-child(2) {
   font-family: 'SweetyStrawberry';
+  color: #72bf56;
 }
 
 .tesseract a {
@@ -220,7 +257,6 @@ section {
 
 .menu-note {
   background: #fcdfdb;
-  color: #3d1319;
   text-align: center;
   margin: 30px 0 30px;
   padding: 0 15px 0 15px;
@@ -231,30 +267,78 @@ section {
   font-family: 'Heart-Warning';
 }
 
+.menu-note .prix {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-note {
+    box-shadow: 0px 0px 10px 3px #c2c0c0;
+    padding: 0 65px 0 65px;
+  }
+  .menu-note .plat {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+  }
+  .menu-note .prix {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-note {
+    padding: 0 100px 0 100px;
+  }
+}
+
+.menu-note h3,
+.menu-note p {
+  color: #3d1319;
+  font-family: 'Heart-Warning';
+}
+
 .menu-note .titre {
   font-family: 'Devonshire-regular';
-  font-size: 2em;
+  font-size: 2.5em;
+  margin-top: 5px;
 }
 
 .menu-note .titre--pluspetit {
   font-family: 'Devonshire-regular';
   font-size: 2em;
+  margin-top: 50px;
 }
 
 .menu-note h3 {
-  display: inline;
+  display: inline-block;
   padding-bottom: 3px;
   background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
+  margin-top: 50px;
 }
 
 .menu-note h3:hover {
   background-size: 100% 100%;
 }
 
-.prix {
-  font-weight: bold;
+.menu-note .i-note {
+  background: linear-gradient(to right, #f15d61, #f6916a);
+  color: transparent;
+  background-clip: text;
+  font-size: 4rem;
+  margin: 50px 0 0;
+}
+
+.menu-note .fab {
+  background: linear-gradient(to right, #f15d61, #f6916a);
+  color: transparent;
+  background-clip: text;
+  margin-right: 10px;
 }
 
 .soon {
@@ -266,14 +350,11 @@ section {
   background-color: #579c87;
   border-radius: 10px;
   margin-bottom: 100px;
-}
-
-.soon__menu {
   opacity: 1;
   transition: opacity 0.6s;
 }
 
-.soon__menu:hover {
+.soon:hover {
   opacity: 0.8;
 }
 
@@ -313,17 +394,307 @@ section {
 }
 
 .mentions {
+  max-width: 900px;
   background: #fcdfdb;
-  color: #3d1319;
+  padding: 20px 15px 30px 15px;
+  margin: 30px 0 30px;
+  font-family: 'Archivo';
+  box-shadow: 0px 0px 10px 3px #c2c0c0;
+}
+
+.mentions h2,
+.mentions h3 {
+  margin: 30px 0 0;
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, black 0%, black 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.mentions h2:hover,
+.mentions h3:hover {
+  background-size: 100% 100%;
+}
+
+.mentions a {
+  text-decoration: none;
+  color: #579c87;
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #579c87 0%, #579c87 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.mentions a:hover {
+  background-size: 100% 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-chic {
+  background: #fff5fe;
   text-align: center;
   margin: 30px 0 30px;
   padding: 0 15px 0 15px;
-  text-align: left !important;
 }
 
-.mentions p,
-.mentions h3 {
+.menu-chic p,
+.menu-chic h3 {
   font-family: 'Heart-Warning';
+}
+
+.menu-chic .prix {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-chic {
+    box-shadow: 0px 0px 10px 3px #c2c0c0;
+    padding: 0 65px 0 65px;
+  }
+  .menu-chic .plat {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+  }
+  .menu-chic .prix {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-chic {
+    padding: 0 100px 0 100px;
+  }
+}
+
+.menu-chic h2 {
+  background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%);
+  color: transparent;
+  background-clip: text;
+  font-family: 'CroissantOne-Regular';
+  font-size: 1.8rem;
+  margin: 50px 0 50px;
+}
+
+.menu-chic p,
+.menu-chic h3 {
+  font-family: 'Vinegar-Regular';
+}
+
+.menu-chic__titre-entree h3,
+.menu-chic__titre-entree p {
+  color: #c77412;
+}
+
+.menu-chic__titre-entree h3 {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #c77412 0%, #c77412 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+  margin-top: 20px;
+}
+
+.menu-chic__titre-entree h3:hover {
+  background-size: 100% 100%;
+}
+
+.menu-chic__titre-plat h3,
+.menu-chic__titre-plat p {
+  color: #a56899;
+}
+
+.menu-chic__titre-plat h3 {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #a56899 0%, #a56899 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+  margin-top: 50px;
+}
+
+.menu-chic__titre-plat h3:hover {
+  background-size: 100% 100%;
+}
+
+.menu-chic__titre-dessert h3,
+.menu-chic__titre-dessert p {
+  color: #6e4ccc;
+}
+
+.menu-chic__titre-dessert h3 {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+  margin-top: 50px;
+}
+
+.menu-chic__titre-dessert h3:hover {
+  background-size: 100% 100%;
+}
+
+.menu-chic__titre-dessert > p:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-delice {
+  background: #f9f9f9;
+  text-align: center;
+  margin: 30px 0 30px;
+  padding: 0 15px 0 15px;
+}
+
+.menu-delice p,
+.menu-delice h3 {
+  font-family: 'Heart-Warning';
+}
+
+.menu-delice .prix {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-delice {
+    box-shadow: 0px 0px 10px 3px #c2c0c0;
+    padding: 0 65px 0 65px;
+  }
+  .menu-delice .plat {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+  }
+  .menu-delice .prix {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-delice {
+    padding: 0 100px 0 100px;
+  }
+}
+
+.menu-delice h2 {
+  background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%);
+  color: transparent;
+  background-clip: text;
+  font-family: 'DancingScript';
+  font-size: 3.5rem;
+  margin: 50px 0 50px;
+}
+
+.menu-delice h3,
+.menu-delice p {
+  color: black;
+  font-family: 'SweetyStrawberry';
+  letter-spacing: 1px;
+}
+
+.menu-delice h3 {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.menu-delice h3:hover {
+  background-size: 100% 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-palette {
+  background: #fdfffd;
+  text-align: center;
+  margin: 30px 0 30px;
+  padding: 0 15px 0 15px;
+}
+
+.menu-palette p,
+.menu-palette h3 {
+  font-family: 'Heart-Warning';
+}
+
+.menu-palette .prix {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-palette {
+    box-shadow: 0px 0px 10px 3px #c2c0c0;
+    padding: 0 65px 0 65px;
+  }
+  .menu-palette .plat {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+  }
+  .menu-palette .prix {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-palette {
+    padding: 0 100px 0 100px;
+  }
+}
+
+.menu-palette h2 {
+  background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%);
+  color: transparent;
+  background-clip: text;
+  font-family: 'KaushanScript-Regular';
+  font-size: 3.5rem;
+  margin: 50px 0 50px;
+}
+
+.menu-palette h3,
+.menu-palette p {
+  color: black;
+  font-family: 'SweetyStrawberry';
+  letter-spacing: 1px;
+}
+
+.menu-palette h3 {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.menu-palette h3:hover {
+  background-size: 100% 100%;
 }
 
 .landscape {

@@ -1,24 +1,35 @@
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include section;
 }
 
 .menu-note {
-    @include menu;
+    @include menu ($color-note);
+    h3,
+    p {
+        color: $color-text-note;
+        font-family: 'Heart-Warning';
+    }
     .titre {
         font-family: 'Devonshire-regular';
-        font-size: 2em;
+        font-size: 2.5em;
+        margin-top: 5px;
         &--pluspetit {
             font-family: 'Devonshire-regular';
             font-size: 2em;
+            margin-top: 50px;
         }
     }
     h3 {
-        @include AnimUnder;
+        @include Under($color-text-note);
+        margin-top: 50px;
     }
-}
-
-.prix {
-    font-weight: bold;
+    .i-note {
+        @include degrade-note;
+        font-size: 4rem;
+        margin: 50px 0 0;
+    }
+    .fab {
+        @include degrade-note;
+        margin-right: 10px;
+    }
 }

@@ -1,0 +1,22 @@
+section {
+    @include section;
+}
+
+.menu-palette {
+    @include menu ($color-palette);
+    h2 {
+        @include degrade-palette;
+        font-family: 'KaushanScript-Regular';
+        font-size: 3.5rem;
+        margin: 50px 0 50px;
+    }
+    h3,
+    p {
+        color: $color-black;
+        font-family: 'SweetyStrawberry';
+        letter-spacing: 1px;
+    }
+    h3 {
+        @include Under($color-text-note);
+    }
+}
