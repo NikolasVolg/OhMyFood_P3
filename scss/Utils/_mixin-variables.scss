@@ -31,24 +31,28 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
 @mixin degrade-note {
     background: linear-gradient(to right, $leftcolor, $rightcolor);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
 @mixin degrade-chic {
     background: linear-gradient(135deg, $chic-left 0%, $chic-right 71%);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
 @mixin degrade-delice {
     background: linear-gradient(135deg, $delice-left 0%, $delice-right 100%);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
 @mixin degrade-palette {
     background: linear-gradient(135deg, $palette-left 0%, $palette-right 100%);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 

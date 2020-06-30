@@ -126,6 +126,7 @@ footer a {
     flex-direction: unset;
     flex-wrap: wrap;
     justify-content: center;
+    width: 650px;
   }
 }
 
@@ -160,6 +161,7 @@ footer a {
 .tesseract__chic a > p:nth-child(1) {
   background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'CroissantOne-Regular';
 }
@@ -176,6 +178,7 @@ footer a {
 .tesseract__delice a > p:nth-child(1) {
   background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'DancingScript';
   font-size: 1.5em;
@@ -193,6 +196,7 @@ footer a {
 .tesseract__palette a > p:nth-child(1) {
   background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'KaushanScript-Regular';
   font-size: 1.5em;
@@ -246,6 +250,7 @@ footer a {
   font-size: 3em;
   background: linear-gradient(to right, #f15d61, #f6916a);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
@@ -329,6 +334,7 @@ section {
 .menu-note .i-note {
   background: linear-gradient(to right, #f15d61, #f6916a);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-size: 4rem;
   margin: 50px 0 0;
@@ -337,6 +343,7 @@ section {
 .menu-note .fab {
   background: linear-gradient(to right, #f15d61, #f6916a);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   margin-right: 10px;
 }
@@ -480,6 +487,7 @@ section {
 .menu-chic h2 {
   background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'CroissantOne-Regular';
   font-size: 1.8rem;
@@ -598,6 +606,7 @@ section {
 .menu-delice h2 {
   background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'DancingScript';
   font-size: 3.5rem;
@@ -672,6 +681,7 @@ section {
 .menu-palette h2 {
   background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%);
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: 'KaushanScript-Regular';
   font-size: 3.5rem;
