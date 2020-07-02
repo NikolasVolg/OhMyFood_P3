@@ -4,7 +4,6 @@
     padding: 20px 15px 30px 15px;
     margin: 30px 0 30px;
     font-family: 'Archivo';
-    margin: auto;
     @include boxshadow;
     h2,
     h3 {
@@ -16,4 +15,8 @@
         color: $color-primary;
         @include Under ($color-primary)
     }
+}
+
+section {
+    margin: auto;
 }
