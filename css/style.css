@@ -38,22 +38,13 @@
 }
 
 @keyframes shake {
-  0%,
+  0% {
+    transform: translateX(5%);
+    transform: rotate(5deg);
+  }
   100% {
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-5px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(5px);
+    transform: translateX(-5%);
+    transform: rotate(-5deg);
   }
 }
 
@@ -119,6 +110,7 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -255,48 +247,54 @@ footer a {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  margin: 1rem 3% 8rem 3%;
 }
 
 .menu-note {
   background: #fcdfdb;
   text-align: center;
-  margin: 30px 0 30px;
-  padding: 0 15px 0 15px;
+  padding: 50px 15px 50px 15px;
+  margin: auto;
+  max-width: 700px;
 }
 
-.menu-note p,
 .menu-note h3 {
-  font-family: 'Heart-Warning';
+  white-space: nowrap;
+  width: 235px;
 }
 
 .menu-note .prix {
   font-weight: bold;
 }
 
+.menu-note .Line {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.menu-note .Line img {
+  min-width: 10%;
+}
+
 @media screen and (min-width: 768px) {
   .menu-note {
     box-shadow: 0px 0px 10px 3px #c2c0c0;
-    padding: 0 65px 0 65px;
   }
   .menu-note .plat {
     display: flex;
     justify-content: flex-start;
-    margin-right: 50px;
+    margin-left: 50px;
   }
   .menu-note .prix {
     display: flex;
     justify-content: flex-end;
-    margin-top: -35px;
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .menu-note {
-    padding: 0 100px 0 100px;
+    margin: -37px 50px 0;
   }
 }
 
@@ -304,6 +302,20 @@ section {
 .menu-note p {
   color: #3d1319;
   font-family: 'Heart-Warning';
+}
+
+.menu-note h3 span,
+.menu-note p span {
+  display: inline-block;
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.menu-note h3 span:hover,
+.menu-note p span:hover {
+  background-size: 100% 100%;
 }
 
 .menu-note .titre {
@@ -316,19 +328,6 @@ section {
   font-family: 'Devonshire-regular';
   font-size: 2em;
   margin-top: 50px;
-}
-
-.menu-note h3 {
-  display: inline-block;
-  padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.6s ease-in-out;
-  margin-top: 50px;
-}
-
-.menu-note h3:hover {
-  background-size: 100% 100%;
 }
 
 .menu-note .i-note {
@@ -352,28 +351,34 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.soon__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 45px;
   width: 265px;
   background-color: #579c87;
   border-radius: 10px;
-  margin-bottom: 100px;
   opacity: 1;
   transition: opacity 0.6s;
+  margin-top: 50px;
 }
 
-.soon:hover {
+.soon__btn:hover {
   opacity: 0.8;
 }
 
-.soon p,
-.soon a {
+.soon__btn p,
+.soon__btn a {
   text-decoration: none;
   color: #fdcb46;
   font-family: 'Archivo', sans-serif;
   font-size: 1.3rem;
 }
 
-.soon span {
+.soon__btn span {
   width: 6px;
   height: 6px;
   margin: 0 2px 4px;
@@ -386,18 +391,17 @@ section {
   animation-timing-function: ease-in-out;
 }
 
-.soon span:nth-child(2) {
+.soon__btn span:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.soon span:nth-child(3) {
+.soon__btn span:nth-child(3) {
   animation-delay: 0.8s;
 }
 
 .vibreur:hover {
-  animation-name: shake;
-  animation-duration: 0.6s;
-  animation-iteration-count: infinite;
+  animation: shake 60ms ease-in-out;
+  animation-iteration-count: 20;
 }
 
 .mentions {
@@ -439,48 +443,54 @@ section {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  margin: 1rem 3% 8rem 3%;
 }
 
 .menu-chic {
   background: #fff5fe;
   text-align: center;
-  margin: 30px 0 30px;
-  padding: 0 15px 0 15px;
+  padding: 50px 15px 50px 15px;
+  margin: auto;
+  max-width: 700px;
 }
 
-.menu-chic p,
 .menu-chic h3 {
-  font-family: 'Heart-Warning';
+  white-space: nowrap;
+  width: 235px;
 }
 
 .menu-chic .prix {
   font-weight: bold;
 }
 
+.menu-chic .Line {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.menu-chic .Line img {
+  min-width: 10%;
+}
+
 @media screen and (min-width: 768px) {
   .menu-chic {
     box-shadow: 0px 0px 10px 3px #c2c0c0;
-    padding: 0 65px 0 65px;
   }
   .menu-chic .plat {
     display: flex;
     justify-content: flex-start;
-    margin-right: 50px;
+    margin-left: 50px;
   }
   .menu-chic .prix {
     display: flex;
     justify-content: flex-end;
-    margin-top: -35px;
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .menu-chic {
-    padding: 0 100px 0 100px;
+    margin: -36px 50px 0;
   }
 }
 
@@ -504,16 +514,17 @@ section {
   color: #c77412;
 }
 
-.menu-chic__titre-entree h3 {
+.menu-chic__titre-entree h3 span,
+.menu-chic__titre-entree p span {
   display: inline-block;
   padding-bottom: 3px;
   background: linear-gradient(to top, #c77412 0%, #c77412 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
-  margin-top: 20px;
 }
 
-.menu-chic__titre-entree h3:hover {
+.menu-chic__titre-entree h3 span:hover,
+.menu-chic__titre-entree p span:hover {
   background-size: 100% 100%;
 }
 
@@ -522,16 +533,17 @@ section {
   color: #a56899;
 }
 
-.menu-chic__titre-plat h3 {
+.menu-chic__titre-plat h3 span,
+.menu-chic__titre-plat p span {
   display: inline-block;
   padding-bottom: 3px;
   background: linear-gradient(to top, #a56899 0%, #a56899 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
-  margin-top: 50px;
 }
 
-.menu-chic__titre-plat h3:hover {
+.menu-chic__titre-plat h3 span:hover,
+.menu-chic__titre-plat p span:hover {
   background-size: 100% 100%;
 }
 
@@ -540,16 +552,17 @@ section {
   color: #6e4ccc;
 }
 
-.menu-chic__titre-dessert h3 {
+.menu-chic__titre-dessert h3 span,
+.menu-chic__titre-dessert p span {
   display: inline-block;
   padding-bottom: 3px;
   background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
-  margin-top: 50px;
 }
 
-.menu-chic__titre-dessert h3:hover {
+.menu-chic__titre-dessert h3 span:hover,
+.menu-chic__titre-dessert p span:hover {
   background-size: 100% 100%;
 }
 
@@ -558,48 +571,54 @@ section {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  margin: 1rem 3% 8rem 3%;
 }
 
 .menu-delice {
   background: #f9f9f9;
   text-align: center;
-  margin: 30px 0 30px;
-  padding: 0 15px 0 15px;
+  padding: 50px 15px 50px 15px;
+  margin: auto;
+  max-width: 700px;
 }
 
-.menu-delice p,
 .menu-delice h3 {
-  font-family: 'Heart-Warning';
+  white-space: nowrap;
+  width: 235px;
 }
 
 .menu-delice .prix {
   font-weight: bold;
 }
 
+.menu-delice .Line {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.menu-delice .Line img {
+  min-width: 10%;
+}
+
 @media screen and (min-width: 768px) {
   .menu-delice {
     box-shadow: 0px 0px 10px 3px #c2c0c0;
-    padding: 0 65px 0 65px;
   }
   .menu-delice .plat {
     display: flex;
     justify-content: flex-start;
-    margin-right: 50px;
+    margin-left: 50px;
   }
   .menu-delice .prix {
     display: flex;
     justify-content: flex-end;
-    margin-top: -35px;
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .menu-delice {
-    padding: 0 100px 0 100px;
+    margin: -40px 50px 0;
   }
 }
 
@@ -620,61 +639,69 @@ section {
   letter-spacing: 1px;
 }
 
-.menu-delice h3 {
+.menu-delice h3 span,
+.menu-delice p span {
   display: inline-block;
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, black 0%, black 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
 }
 
-.menu-delice h3:hover {
+.menu-delice h3 span:hover,
+.menu-delice p span:hover {
   background-size: 100% 100%;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  margin: 1rem 3% 8rem 3%;
 }
 
 .menu-palette {
   background: #fdfffd;
   text-align: center;
-  margin: 30px 0 30px;
-  padding: 0 15px 0 15px;
+  padding: 50px 15px 50px 15px;
+  margin: auto;
+  max-width: 700px;
 }
 
-.menu-palette p,
 .menu-palette h3 {
-  font-family: 'Heart-Warning';
+  white-space: nowrap;
+  width: 235px;
 }
 
 .menu-palette .prix {
   font-weight: bold;
 }
 
+.menu-palette .Line {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.menu-palette .Line img {
+  min-width: 10%;
+}
+
 @media screen and (min-width: 768px) {
   .menu-palette {
     box-shadow: 0px 0px 10px 3px #c2c0c0;
-    padding: 0 65px 0 65px;
   }
   .menu-palette .plat {
     display: flex;
     justify-content: flex-start;
-    margin-right: 50px;
+    margin-left: 50px;
   }
   .menu-palette .prix {
     display: flex;
     justify-content: flex-end;
-    margin-top: -35px;
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .menu-palette {
-    padding: 0 100px 0 100px;
+    margin: -37px 50px 0;
   }
 }
 
@@ -695,15 +722,17 @@ section {
   letter-spacing: 1px;
 }
 
-.menu-palette h3 {
+.menu-palette h3 span,
+.menu-palette p span {
   display: inline-block;
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 2px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, black 0%, black 2px, transparent 1px) no-repeat;
   background-size: 0 100%;
   transition: background-size 0.6s ease-in-out;
 }
 
-.menu-palette h3:hover {
+.menu-palette h3 span:hover,
+.menu-palette p span:hover {
   background-size: 100% 100%;
 }
 

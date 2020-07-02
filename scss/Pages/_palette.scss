@@ -15,8 +15,8 @@ section {
         color: $color-black;
         font-family: 'SweetyStrawberry';
         letter-spacing: 1px;
-    }
-    h3 {
-        @include Under($color-text-note);
+        span {
+            @include Under($color-black);
+        }
     }
 }

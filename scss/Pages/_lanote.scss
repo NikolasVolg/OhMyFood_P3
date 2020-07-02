@@ -8,6 +8,9 @@ section {
     p {
         color: $color-text-note;
         font-family: 'Heart-Warning';
+        span {
+            @include Under($color-text-note);
+        }
     }
     .titre {
         font-family: 'Devonshire-regular';
@@ -18,10 +21,6 @@ section {
             font-size: 2em;
             margin-top: 50px;
         }
-    }
-    h3 {
-        @include Under($color-text-note);
-        margin-top: 50px;
     }
     .i-note {
         @include degrade-note;
