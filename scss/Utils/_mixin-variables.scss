@@ -26,7 +26,8 @@ $palette-right: #beff7f;
 $menu-palette-colortext: #72bf56;
 //-----------------------Map-get
 $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
-$margin-negatif: (marg-chic: -36px, marg-note: -37px, marg-del-pal: -40px);
+$margin-prix: (marg-chic: -36px, marg-note: -20px, marg-del-pal: -30px);
+$margin-plat: (marg-C: 0, marg:0);
 //-----------------MIXIN
 //-----
 //---------------------dégradés de texte
@@ -131,7 +132,7 @@ $margin-negatif: (marg-chic: -36px, marg-note: -37px, marg-del-pal: -40px);
     }
 }
 
-@mixin menu ($colour-bgd: #eee, $margin: map-get($margin-negatif, marg-note)) {
+@mixin menu ($colour-bgd: #eee, $marginPl: map-get($margin-plat, marg-N), $margin: map-get($margin-prix, marg-note)) {
     background: $colour-bgd;
     text-align: center;
     padding: 50px 15px 50px 15px;
@@ -160,7 +161,7 @@ $margin-negatif: (marg-chic: -36px, marg-note: -37px, marg-del-pal: -40px);
         .plat {
             display: flex;
             justify-content: flex-start;
-            margin-left: 50px;
+            margin: 0 0 0 50px;
         }
         .prix {
             display: flex;

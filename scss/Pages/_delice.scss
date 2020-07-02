@@ -3,7 +3,7 @@ section {
 }
 
 .menu-delice {
-    @include menu ($color-delice, $margin: map-get($margin-negatif, marg-del-pal));
+    @include menu ($color-delice, $margin: map-get($margin-prix, marg-del-pal));
     h2 {
         @include degrade-delice;
         font-family: 'DancingScript';

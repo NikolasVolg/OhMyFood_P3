@@ -3,7 +3,7 @@ section {
 }
 
 .menu-palette {
-    @include menu ($color-palette);
+    @include menu ($color-palette, $margin: map-get($margin-prix, marg-del-pal));
     h2 {
         @include degrade-palette;
         font-family: 'KaushanScript-Regular';
