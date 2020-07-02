@@ -412,7 +412,7 @@ section {
   max-width: 900px;
   background: #fcdfdb;
   padding: 20px 15px 30px 15px;
-  margin: 30px 0 30px;
+  margin: auto;
   font-family: 'Archivo';
   box-shadow: 0px 0px 10px 3px #c2c0c0;
 }
@@ -444,10 +444,6 @@ section {
 
 .mentions a:hover {
   background-size: 100% 100%;
-}
-
-section {
-  margin: auto;
 }
 
 section {

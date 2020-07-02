@@ -2,7 +2,7 @@
     max-width: 900px;
     background: $color-note;
     padding: 20px 15px 30px 15px;
-    margin: 30px 0 30px;
+    margin: auto;
     font-family: 'Archivo';
     @include boxshadow;
     h2,
@@ -15,8 +15,4 @@
         color: $color-primary;
         @include Under ($color-primary)
     }
-}
-
-section {
-    margin: auto;
 }
