@@ -16,11 +16,11 @@ section {
         font-family: 'Devonshire-regular';
         font-size: 2.5em;
         margin-top: 5px;
-        &--pluspetit {
-            font-family: 'Devonshire-regular';
-            font-size: 2em;
-            margin-top: 50px;
-        }
+    }
+    h2 {
+        font-family: 'Devonshire-regular';
+        font-size: 2em;
+        margin-top: 50px;
     }
     .i-note {
         @include degrade-note;
