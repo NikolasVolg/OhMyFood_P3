@@ -26,8 +26,8 @@ $palette-right: #beff7f;
 $menu-palette-colortext: #72bf56;
 //-----------------------Map-get
 $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
-$margin-prix: (marg-chic: -36px, marg-note: -20px, marg-del-pal: -30px);
-$margin-plat: (marg-C: 0, marg:0);
+// $margin-prix: (marg-chic: -36px, marg-note: -20px, marg-del-pal: -30px);
+// $margin-plat: (marg-C: 0, marg:0);
 //-----------------MIXIN
 //-----
 //---------------------dégradés de texte
@@ -72,7 +72,7 @@ $margin-plat: (marg-C: 0, marg:0);
     align-items: center;
 }
 
-@mixin section {
+@mixin main {
     display: block;
     margin: 1rem 3% 8rem 3%;
 }
@@ -132,7 +132,7 @@ $margin-plat: (marg-C: 0, marg:0);
     }
 }
 
-@mixin menu ($colour-bgd: #eee, $marginPl: map-get($margin-plat, marg-N), $margin: map-get($margin-prix, marg-note)) {
+@mixin menu ($colour-bgd: #eee) {
     background: $colour-bgd;
     text-align: center;
     padding: 50px 15px 50px 15px;
@@ -141,9 +141,6 @@ $margin-plat: (marg-C: 0, marg:0);
     h3 {
         white-space: nowrap;
         width: 235px;
-    }
-    .prix {
-        font-weight: bold;
     }
     .Line {
         width: 100%;
@@ -156,18 +153,33 @@ $margin-plat: (marg-C: 0, marg:0);
             min-width: 10%;
         }
     }
+    .dessert {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    div p:nth-child(2) {
+        font-weight: bold;
+    }
     @media screen and (min-width: 768px) {
         @include boxshadow;
-        .plat {
+        // .plat {
+        //     display: flex;
+        //     justify-content: flex-start;
+        //     margin: 0 0 0 50px;
+        // }
+        // .prix {
+        //     display: flex;
+        //     justify-content: flex-end;
+        //     padding-bottom: 20px;
+        //     margin: $margin 50px 0;
+        // }
+        div {
             display: flex;
-            justify-content: flex-start;
-            margin: 0 0 0 50px;
+            justify-content: space-between;
         }
-        .prix {
-            display: flex;
-            justify-content: flex-end;
-            padding-bottom: 20px;
-            margin: $margin 50px 0;
+        .dessert p {
+            text-align: left;
         }
     }
 }

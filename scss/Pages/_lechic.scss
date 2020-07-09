@@ -1,9 +1,9 @@
-section {
-    @include section;
+.main {
+    @include main;
 }
 
 .menu-chic {
-    @include menu ($color-chic, map-get($margin-prix, marg-chic));
+    @include menu ($color-chic);
     h2 {
         @include degrade-chic;
         font-family: 'CroissantOne-Regular';
@@ -14,37 +14,52 @@ section {
     h3 {
         font-family: 'Vinegar-Regular';
     }
-    &__titre-entree {
-        h3,
-        p {
-            color: $menu-chic-colortext;
-            span {
-                @include Under ($menu-chic-colortext);
-            }
-        }
+    h3:nth-of-type(1) span {
+        @include Under ($menu-chic-colortext);
     }
-    &__titre-plat {
-        h3,
-        p {
-            color: $menu-chic-colortext2;
-            span {
-                @include Under ($menu-chic-colortext2);
-            }
-        }
+    h3:nth-of-type(1)::before {
+        width: 100%;
+        height: auto;
+        min-width: 10%;
+        content: url("../Img/LineL-chic-entree.svg");
     }
-    &__titre-dessert {
-        h3,
-        p {
-            color: $menu-chic-colortext3;
-            span {
-                @include Under ($menu-chic-colortext3);
-            }
-        }
-        p {
-            padding-bottom: 20px;
-        }
-        >p:nth-of-type(3) {
-            margin-bottom: 30px;
-        }
+    h3:nth-of-type(1)::after {
+        width: 100%;
+        height: auto;
+        min-width: 10%;
+        content: url("../Img/LineR-chic-entree.svg");
     }
+    // &__titre-entree {
+    //     h3,
+    //     p {
+    //         color: $menu-chic-colortext;
+    //         span {
+    //             @include Under ($menu-chic-colortext);
+    //         }
+    //     }
+    // }
+    // &__titre-plat {
+    //     h3,
+    //     p {
+    //         color: $menu-chic-colortext2;
+    //         span {
+    //             @include Under ($menu-chic-colortext2);
+    //         }
+    //     }
+    // }
+    // &__titre-dessert {
+    //     h3,
+    //     p {
+    //         color: $menu-chic-colortext3;
+    //         span {
+    //             @include Under ($menu-chic-colortext3);
+    //         }
+    //     }
+    //     p {
+    //         padding-bottom: 20px;
+    //     }
+    //     >p:nth-of-type(3) {
+    //         margin-bottom: 30px;
+    //     }
+    // }
 }
