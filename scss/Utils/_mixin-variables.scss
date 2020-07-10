@@ -26,6 +26,8 @@ $palette-right: #beff7f;
 $menu-palette-colortext: #72bf56;
 //-----------------------Map-get
 $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
+$sepB: (chicB1: url(../Img/LineL-chic-entree.svg), chicB2: url(../Img/LineL-chic-plat.svg), chicB3: url(../Img/LineL-chic-dessert.svg), noteB: url(../Img/LineL-Note.svg), deliceB1: url(../Img/LineL-entree-del.svg), deliceB2: url(../Img/LineL-plat-del.svg), deliceB3: url(../Img/LineL-dessert-del.svg), paletteB: url(../Img/LineL-palette.svg));
+$sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic-plat.svg), chicB3: url(../Img/LineR-chic-dessert.svg), noteB: url(../Img/LineR-Note.svg), deliceB1: url(../Img/LineR-entree-del.svg), deliceB2: url(../Img/LineR-plat-del.svg), deliceB3: url(../Img/LineR-dessert-del.svg), paletteB: url(../Img/LineR-palette.svg));
 // $margin-prix: (marg-chic: -36px, marg-note: -20px, marg-del-pal: -30px);
 // $margin-plat: (marg-C: 0, marg:0);
 //-----------------MIXIN
@@ -112,7 +114,7 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     padding: 0 25px 0 25px;
 }
 
-//-----------------------Mixin cadres menus
+//-----------------------Mixin cadres / menus
 @mixin boxshadow {
     box-shadow: 0px 0px 10px 3px $color-box-shadow;
 }
@@ -132,6 +134,58 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
     }
 }
 
+@mixin separateurs {
+    h3 {
+        display: block;
+        position: relative;
+        line-height: 30px;
+        width: 300px;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+    }
+}
+
+@mixin h3before($sepB) {
+    display: none;
+    @media screen and (min-width: 375px) {
+        display: inline-block;
+        content: " ";
+        text-shadow: none;
+        background: $sepB no-repeat center;
+        background-size: 100%;
+        width: 15%;
+        min-width: 10%;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    @media screen and (min-width: 640px) {
+        width: 30%
+    }
+}
+
+@mixin h3after($sepA) {
+    display: none;
+    @media screen and (min-width: 375px) {
+        display: inline-block;
+        content: " ";
+        text-shadow: none;
+        background: $sepA no-repeat center;
+        background-size: 100%;
+        width: 15%;
+        min-width: 10%;
+        height: 30px;
+        position: absolute;
+        right: 0;
+    }
+    @media screen and (min-width: 640px) {
+        width: 30%;
+    }
+}
+
 @mixin menu ($colour-bgd: #eee) {
     background: $colour-bgd;
     text-align: center;
@@ -142,39 +196,17 @@ $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette)
         white-space: nowrap;
         width: 235px;
     }
-    .Line {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 50px;
-        img {
-            min-width: 10%;
-        }
-    }
     .dessert {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
-    div p:nth-child(2) {
+    .tarte p:nth-child(2) {
         font-weight: bold;
     }
     @media screen and (min-width: 768px) {
         @include boxshadow;
-        // .plat {
-        //     display: flex;
-        //     justify-content: flex-start;
-        //     margin: 0 0 0 50px;
-        // }
-        // .prix {
-        //     display: flex;
-        //     justify-content: flex-end;
-        //     padding-bottom: 20px;
-        //     margin: $margin 50px 0;
-        // }
-        div {
+        .tarte {
             display: flex;
             justify-content: space-between;
         }

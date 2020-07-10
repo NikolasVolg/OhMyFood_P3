@@ -1,4 +1,4 @@
-section {
+.main {
     @include main;
 }
 
@@ -9,7 +9,8 @@ section {
         color: $color-text-note;
         font-family: 'Heart-Warning';
         span {
-            @include Under($color-text-note);
+            @include Under ($color-text-note);
+            color: $color-text-note;
         }
     }
     h1 {
@@ -21,6 +22,19 @@ section {
         font-family: 'Devonshire-regular';
         font-size: 2em;
         margin-top: 50px;
+    }
+    h3 {
+        display: inline;
+    }
+    h3+div {
+        color: $color-text-note;
+    }
+    @include separateurs;
+    h3::before {
+        @include h3before (map-get($sepB, noteB));
+    }
+    h3::after {
+        @include h3after (map-get($sepA, noteB));
     }
     .i-note {
         @include degrade-note;

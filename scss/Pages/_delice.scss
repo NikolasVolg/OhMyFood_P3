@@ -1,4 +1,4 @@
-section {
+main {
     @include main;
 }
 
@@ -18,5 +18,32 @@ section {
         span {
             @include Under($color-black);
         }
+    }
+    h3 {
+        display: inline;
+    }
+    //------------entrée
+    @include separateurs;
+    h3:nth-of-type(1):before {
+        @include h3before (map-get($sepB, deliceB1));
+    }
+    h3:nth-of-type(1):after {
+        @include h3after (map-get($sepA, deliceB1));
+    }
+    //-------------plat
+    @include separateurs;
+    h3:nth-of-type(2):before {
+        @include h3before (map-get($sepB, deliceB2));
+    }
+    h3:nth-of-type(2):after {
+        @include h3after (map-get($sepA, deliceB2));
+    }
+    //-----------dessert
+    @include separateurs;
+    h3:nth-of-type(3):before {
+        @include h3before (map-get($sepB, deliceB3));
+    }
+    h3:nth-of-type(3):after {
+        @include h3after (map-get($sepA, deliceB3));
     }
 }

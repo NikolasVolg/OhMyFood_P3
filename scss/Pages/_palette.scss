@@ -1,4 +1,4 @@
-section {
+main {
     @include main;
 }
 
@@ -18,5 +18,15 @@ section {
         span {
             @include Under($color-black);
         }
+    }
+    h3 {
+        display: inline;
+    }
+    @include separateurs;
+    h3::before {
+        @include h3before (map-get($sepB, paletteB));
+    }
+    h3::after {
+        @include h3after (map-get($sepA, paletteB));
     }
 }

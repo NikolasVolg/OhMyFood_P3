@@ -14,52 +14,52 @@
     h3 {
         font-family: 'Vinegar-Regular';
     }
+    h3 {
+        display: inline;
+    }
+    //------------entrée
     h3:nth-of-type(1) span {
         @include Under ($menu-chic-colortext);
+        color: $menu-chic-colortext;
     }
-    h3:nth-of-type(1)::before {
-        width: 100%;
-        height: auto;
-        min-width: 10%;
-        content: url("../Img/LineL-chic-entree.svg");
+    h3:nth-of-type(1)+div {
+        color: $menu-chic-colortext;
     }
-    h3:nth-of-type(1)::after {
-        width: 100%;
-        height: auto;
-        min-width: 10%;
-        content: url("../Img/LineR-chic-entree.svg");
+    @include separateurs;
+    h3:nth-of-type(1):before {
+        @include h3before (map-get($sepB, chicB1));
     }
-    // &__titre-entree {
-    //     h3,
-    //     p {
-    //         color: $menu-chic-colortext;
-    //         span {
-    //             @include Under ($menu-chic-colortext);
-    //         }
-    //     }
-    // }
-    // &__titre-plat {
-    //     h3,
-    //     p {
-    //         color: $menu-chic-colortext2;
-    //         span {
-    //             @include Under ($menu-chic-colortext2);
-    //         }
-    //     }
-    // }
-    // &__titre-dessert {
-    //     h3,
-    //     p {
-    //         color: $menu-chic-colortext3;
-    //         span {
-    //             @include Under ($menu-chic-colortext3);
-    //         }
-    //     }
-    //     p {
-    //         padding-bottom: 20px;
-    //     }
-    //     >p:nth-of-type(3) {
-    //         margin-bottom: 30px;
-    //     }
-    // }
+    h3:nth-of-type(1):after {
+        @include h3after (map-get($sepA, chicB1));
+    }
+    //-------------plat
+    h3:nth-of-type(2) span {
+        @include Under ($menu-chic-colortext2);
+        color: $menu-chic-colortext2;
+    }
+    h3:nth-of-type(2)+div {
+        color: $menu-chic-colortext2;
+    }
+    @include separateurs;
+    h3:nth-of-type(2):before {
+        @include h3before (map-get($sepB, chicB2));
+    }
+    h3:nth-of-type(2):after {
+        @include h3after (map-get($sepA, chicB2));
+    }
+    //-----------dessert
+    h3:nth-of-type(3) span {
+        @include Under ($menu-chic-colortext3);
+        color: $menu-chic-colortext3;
+    }
+    h3:nth-of-type(3)+div {
+        color: $menu-chic-colortext3;
+    }
+    @include separateurs;
+    h3:nth-of-type(3):before {
+        @include h3before (map-get($sepB, chicB3));
+    }
+    h3:nth-of-type(3):after {
+        @include h3after (map-get($sepA, chicB3));
+    }
 }
