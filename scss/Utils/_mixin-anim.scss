@@ -22,7 +22,7 @@
 @mixin Dots {
     width: 6px;
     height: 6px;
-    margin: 0 2px 4px;
+    margin: 0 2px 4px 8px;
     border-radius: 50%;
     background-color: $text-color;
     display: inline-block;

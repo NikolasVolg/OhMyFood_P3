@@ -14,16 +14,35 @@
     }
 }
 
-.tesseract {
-    @include tesseract;
+.cards {
+    @include cards;
+    &__note {
+        a {
+            >p:nth-of-type(1) {
+                font-size: 1.6em !important;
+                font-family: 'Devonshire-Regular';
+                color: $color-text-note;
+                margin-top: 0;
+            }
+            >p:nth-of-type(2) {
+                font-family: 'Heart-Warning';
+                text-transform: uppercase;
+                color: $color-text-note;
+                font-size: 2em;
+                margin-top: 30px;
+            }
+        }
+    }
     &__chic {
         background: map-get($color-menu, chic);
         a {
-            >p:nth-child(1) {
+            >p:nth-of-type(1) {
                 @include degrade-chic;
                 font-family: 'CroissantOne-Regular';
+                text-align: center;
+                font-size: 1.15em !important;
             }
-            >p:nth-child(2) {
+            >p:nth-of-type(2) {
                 font-family: 'Vinegar-Regular';
                 color: $menu-chic-colortext;
             }
@@ -32,12 +51,11 @@
     &__delice {
         background: map-get($color-menu, delice);
         a {
-            >p:nth-child(1) {
+            >p:nth-of-type(1) {
                 @include degrade-delice;
                 font-family: 'DancingScript';
-                font-size: 1.5em;
             }
-            >p:nth-child(2) {
+            >p:nth-of-type(2) {
                 font-family: 'SweetyStrawberry';
                 color: $menu-delice-colortext;
             }
@@ -46,12 +64,11 @@
     &__palette {
         background: map-get($color-menu, palette);
         a {
-            >p:nth-child(1) {
+            >p:nth-of-type(1) {
                 @include degrade-palette;
                 font-family: 'KaushanScript-Regular';
-                font-size: 1.5em;
             }
-            >p:nth-child(2) {
+            >p:nth-of-type(2) {
                 font-family: 'SweetyStrawberry';
                 color: $menu-palette-colortext;
             }
@@ -62,28 +79,20 @@
         flex-direction: column;
         text-decoration: none;
         @include trans-zoom;
-        >p:nth-child(1) {
+        >p:nth-of-type(1) {
             margin: 0;
+            font-size: 1.5em;
         }
-        >p:nth-child(2) {
+        >p:nth-of-type(2) {
             font-size: 2em;
-        }
-        >.bloc-menu-note {
-            font-size: 1.6em !important;
-            font-family: 'Devonshire-Regular';
-            color: $color-text-note;
-            margin-top: 0;
-            &--modif {
-                font-family: 'Heart-Warning';
-                text-transform: uppercase;
-                color: $color-text-note;
-                font-size: 2em;
-                margin-top: 0;
-            }
         }
         >.fab {
             font-size: 3em;
             @include degrade-note;
+        }
+        >i {
+            width: 45px;
+            height: 45px;
         }
     }
 }

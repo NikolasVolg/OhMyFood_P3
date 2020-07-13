@@ -1,23 +1,16 @@
 .soon {
     @include display-fullcenter;
-    &__btn {
-        @include display-fullcenter;
-        height: 45px;
-        width: 265px;
-        background-color: $color-primary;
-        border-radius: 10px;
+    a {
+        @include btn;
         opacity: 1;
         transition: opacity 0.6s;
-        margin: 50px 0 100px;
         &:hover {
             opacity: 0.8;
         }
-        p,
-        a {
-            text-decoration: none;
-            color: $text-color;
-            font-family: 'Archivo', sans-serif;
-            font-size: 1.3rem;
+    }
+    &__btn {
+        p {
+            @include btn;
         }
         span {
             @include Dots

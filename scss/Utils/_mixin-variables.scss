@@ -1,3 +1,4 @@
+//------------------------VARIABLES
 $color-primary: #579c87;
 $text-color: #fdcb46;
 $color-box-shadow: #c2c0c0;
@@ -24,14 +25,11 @@ $color-palette:#fdfffd;
 $palette-left: #3e923a;
 $palette-right: #beff7f;
 $menu-palette-colortext: #72bf56;
-//-----------------------Map-get
+//-----------------------MAP-GET
 $color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
 $sepB: (chicB1: url(../Img/LineL-chic-entree.svg), chicB2: url(../Img/LineL-chic-plat.svg), chicB3: url(../Img/LineL-chic-dessert.svg), noteB: url(../Img/LineL-Note.svg), deliceB1: url(../Img/LineL-entree-del.svg), deliceB2: url(../Img/LineL-plat-del.svg), deliceB3: url(../Img/LineL-dessert-del.svg), paletteB: url(../Img/LineL-palette.svg));
 $sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic-plat.svg), chicB3: url(../Img/LineR-chic-dessert.svg), noteB: url(../Img/LineR-Note.svg), deliceB1: url(../Img/LineR-entree-del.svg), deliceB2: url(../Img/LineR-plat-del.svg), deliceB3: url(../Img/LineR-dessert-del.svg), paletteB: url(../Img/LineR-palette.svg));
-// $margin-prix: (marg-chic: -36px, marg-note: -20px, marg-del-pal: -30px);
-// $margin-plat: (marg-C: 0, marg:0);
-//-----------------MIXIN
-//-----
+//------------------------------MIXIN-----------------!!
 //---------------------dégradés de texte
 @mixin degrade-note {
     background: linear-gradient(to right, $leftcolor, $rightcolor);
@@ -79,6 +77,19 @@ $sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic
     margin: 1rem 3% 8rem 3%;
 }
 
+@mixin btn {
+    @include display-fullcenter;
+    text-decoration: none;
+    color: $text-color;
+    font-family: 'Archivoregular', sans-serif;
+    font-size: 1.3rem;
+    height: 45px;
+    width: 265px;
+    background-color: $color-primary;
+    border-radius: 10px;
+    margin: 50px 0 100px;
+}
+
 //-----------------Mixin header--footer
 @mixin header {
     height: 110px;
@@ -106,7 +117,7 @@ $sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic
 }
 
 @mixin footer-a {
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Archivoregular', sans-serif;
     font-size: 1.2rem;
     text-align: center;
     color: $text-color;
@@ -119,7 +130,7 @@ $sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic
     box-shadow: 0px 0px 10px 3px $color-box-shadow;
 }
 
-@mixin tesseract {
+@mixin cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
