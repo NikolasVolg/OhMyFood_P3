@@ -152,7 +152,7 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
 
 .vibreur:hover { -webkit-animation: shake 60ms ease-in-out; animation: shake 60ms ease-in-out; -webkit-animation-iteration-count: 20; animation-iteration-count: 20; }
 
-.mentions { max-width: 900px; background: #fcdfdb; padding: 20px 15px 30px 15px; margin: auto; font-family: 'Archivo'; box-shadow: 0px 0px 10px 3px #c2c0c0; }
+.mentions { max-width: 900px; background: #fcdfdb; padding: 20px 15px 30px 15px; margin: auto; font-family: 'Archivoregular'; box-shadow: 0px 0px 10px 3px #c2c0c0; }
 
 .mentions h2, .mentions h3 { margin: 30px 0 0; display: inline-block; padding-bottom: 3px; background: linear-gradient(to top, black 0%, black 2px, transparent 1px) no-repeat; background-size: 0 100%; transition: background-size 0.6s ease-in-out; }
 
@@ -345,5 +345,3 @@ main { display: block; margin: 1rem 3% 8rem 3%; }
 @media screen and (min-width: 375px) { .menu-palette h3::after { display: inline-block; content: " "; text-shadow: none; background: url(../Img/LineR-palette.svg) no-repeat center; background-size: 100%; width: 15%; min-width: 10%; height: 30px; position: absolute; right: 0; } }
 
 @media screen and (min-width: 640px) { .menu-palette h3::after { width: 30%; } }
-
-.landscape { display: none; }

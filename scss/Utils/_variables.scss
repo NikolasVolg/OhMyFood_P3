@@ -1,0 +1,31 @@
+//------------------------VARIABLES
+$color-primary: #579c87;
+$text-color: #fdcb46;
+$color-box-shadow: #c2c0c0;
+$color-black: black;
+//-----------------------menu note
+$color-note:#fcdfdb;
+$color-text-note: #3d1319;
+$leftcolor: #f15d61;
+$rightcolor: #f6916a;
+//-----------------------chic
+$color-chic:#fff5fe;
+$chic-left: #e38a12;
+$chic-right: #9056ff;
+$menu-chic-colortext: #c77412;
+$menu-chic-colortext2: #a56899;
+$menu-chic-colortext3: #6e4ccc;
+//-----------------------delice
+$color-delice: #f9f9f9;
+$delice-left: #0229dd;
+$delice-right: #0e8cfb;
+$menu-delice-colortext: #0887fb;
+//-----------------------palette
+$color-palette:#fdfffd;
+$palette-left: #3e923a;
+$palette-right: #beff7f;
+$menu-palette-colortext: #72bf56;
+//-----------------------MAP-GET
+$color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
+$sepB: (chicB1: url(../Img/LineL-chic-entree.svg), chicB2: url(../Img/LineL-chic-plat.svg), chicB3: url(../Img/LineL-chic-dessert.svg), noteB: url(../Img/LineL-Note.svg), deliceB1: url(../Img/LineL-entree-del.svg), deliceB2: url(../Img/LineL-plat-del.svg), deliceB3: url(../Img/LineL-dessert-del.svg), paletteB: url(../Img/LineL-palette.svg));
+$sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic-plat.svg), chicB3: url(../Img/LineR-chic-dessert.svg), noteB: url(../Img/LineR-Note.svg), deliceB1: url(../Img/LineR-entree-del.svg), deliceB2: url(../Img/LineR-plat-del.svg), deliceB3: url(../Img/LineR-dessert-del.svg), paletteB: url(../Img/LineR-palette.svg));

@@ -25,9 +25,9 @@
     }
     h3 {
         display: inline;
-    }
-    h3+div {
-        color: $color-text-note;
+        +div {
+            color: $color-text-note;
+        }
     }
     @include separateurs;
     h3::before {
@@ -37,12 +37,12 @@
         @include h3after (map-get($sepA, noteB));
     }
     .i-note {
-        @include degrade-note;
+        @include degrade-text (to right, $leftcolor, $rightcolor);
         font-size: 4rem;
         margin: 50px 0 0;
     }
     .fab {
-        @include degrade-note;
+        @include degrade-text (to right, $leftcolor, $rightcolor);
         margin-right: 10px;
     }
 }

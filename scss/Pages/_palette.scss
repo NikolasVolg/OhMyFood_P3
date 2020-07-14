@@ -5,7 +5,7 @@ main {
 .menu-palette {
     @include menu ($color-palette);
     h2 {
-        @include degrade-palette;
+        @include degrade-text (135deg, $palette-left 0%, $palette-right 100%);
         font-family: 'KaushanScript-Regular';
         font-size: 3.5rem;
         margin: 50px 0 50px;

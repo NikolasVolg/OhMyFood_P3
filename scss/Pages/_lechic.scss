@@ -5,7 +5,7 @@
 .menu-chic {
     @include menu ($color-chic);
     h2 {
-        @include degrade-chic;
+        @include degrade-text (135deg, $chic-left 0%, $chic-right 71%);
         font-family: 'CroissantOne-Regular';
         font-size: 1.8rem;
         margin: 50px 0 50px;

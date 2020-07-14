@@ -37,7 +37,7 @@
         background: map-get($color-menu, chic);
         a {
             >p:nth-of-type(1) {
-                @include degrade-chic;
+                @include degrade-text (135deg, $chic-left 0%, $chic-right 71%);
                 font-family: 'CroissantOne-Regular';
                 text-align: center;
                 font-size: 1.15em !important;
@@ -52,7 +52,7 @@
         background: map-get($color-menu, delice);
         a {
             >p:nth-of-type(1) {
-                @include degrade-delice;
+                @include degrade-text(135deg, $delice-left 0%, $delice-right 100%);
                 font-family: 'DancingScript';
             }
             >p:nth-of-type(2) {
@@ -65,7 +65,7 @@
         background: map-get($color-menu, palette);
         a {
             >p:nth-of-type(1) {
-                @include degrade-palette;
+                @include degrade-text (135deg, $palette-left 0%, $palette-right 100%);
                 font-family: 'KaushanScript-Regular';
             }
             >p:nth-of-type(2) {
@@ -88,7 +88,7 @@
         }
         >.fab {
             font-size: 3em;
-            @include degrade-note;
+            @include degrade-text (to right, $leftcolor, $rightcolor);
         }
         >i {
             width: 45px;

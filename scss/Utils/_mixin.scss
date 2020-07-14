@@ -1,64 +1,35 @@
-//------------------------VARIABLES
-$color-primary: #579c87;
-$text-color: #fdcb46;
-$color-box-shadow: #c2c0c0;
-//-----------------------menu note
-$color-note:#fcdfdb;
-$color-text-note: #3d1319;
-$leftcolor: #f15d61;
-$rightcolor: #f6916a;
-//-----------------------chic
-$color-chic:#fff5fe;
-$chic-left: #e38a12;
-$chic-right: #9056ff;
-$menu-chic-colortext: #c77412;
-$menu-chic-colortext2: #a56899;
-$menu-chic-colortext3: #6e4ccc;
-//-----------------------delice
-$color-black: black;
-$color-delice: #f9f9f9;
-$delice-left: #0229dd;
-$delice-right: #0e8cfb;
-$menu-delice-colortext: #0887fb;
-//-----------------------palette
-$color-palette:#fdfffd;
-$palette-left: #3e923a;
-$palette-right: #beff7f;
-$menu-palette-colortext: #72bf56;
-//-----------------------MAP-GET
-$color-menu: (chic: $color-chic, delice: $color-delice, palette: $color-palette);
-$sepB: (chicB1: url(../Img/LineL-chic-entree.svg), chicB2: url(../Img/LineL-chic-plat.svg), chicB3: url(../Img/LineL-chic-dessert.svg), noteB: url(../Img/LineL-Note.svg), deliceB1: url(../Img/LineL-entree-del.svg), deliceB2: url(../Img/LineL-plat-del.svg), deliceB3: url(../Img/LineL-dessert-del.svg), paletteB: url(../Img/LineL-palette.svg));
-$sepA: (chicB1: url(../Img/LineR-chic-entree.svg), chicB2: url(../Img/LineR-chic-plat.svg), chicB3: url(../Img/LineR-chic-dessert.svg), noteB: url(../Img/LineR-Note.svg), deliceB1: url(../Img/LineR-entree-del.svg), deliceB2: url(../Img/LineR-plat-del.svg), deliceB3: url(../Img/LineR-dessert-del.svg), paletteB: url(../Img/LineR-palette.svg));
-//------------------------------MIXIN-----------------!!
 //---------------------dégradés de texte
-@mixin degrade-note {
-    background: linear-gradient(to right, $leftcolor, $rightcolor);
+@mixin degrade-text ($direct: to right, $color1: #eee 0%, $color2: #333 0%) {
+    background: linear-gradient($direct, $color1, $color2);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-@mixin degrade-chic {
-    background: linear-gradient(135deg, $chic-left 0%, $chic-right 71%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-@mixin degrade-delice {
-    background: linear-gradient(135deg, $delice-left 0%, $delice-right 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-@mixin degrade-palette {
-    background: linear-gradient(135deg, $palette-left 0%, $palette-right 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
+// @mixin degrade-note {
+//     background: linear-gradient(to right, $leftcolor, $rightcolor);
+//     color: transparent;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+// }
+// @mixin degrade-chic {
+//     background: linear-gradient(135deg, $chic-left 0%, $chic-right 71%);
+//     color: transparent;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+// }
+// @mixin degrade-delice {
+//     background: linear-gradient(135deg, $delice-left 0%, $delice-right 100%);
+//     color: transparent;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+// }
+// @mixin degrade-palette {
+//     background: linear-gradient(135deg, $palette-left 0%, $palette-right 100%);
+//     color: transparent;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+// }
 //------------------Mixin générales
 @mixin min-reset {
     height: 100%;
