@@ -52,9 +52,9 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
 
 @media screen and (min-width: 1024px) { .conteneur { width: 900px; } }
 
-.cards { display: flex; flex-direction: column; justify-content: center; height: 305px; width: 220px; margin: 20px; background: #fcdfdb; box-shadow: 0px 0px 10px 3px #c2c0c0; }
+.cards { display: flex; flex-direction: column; justify-content: center; height: 345px; width: 260px; margin: 20px; background: #fcdfdb; box-shadow: 0px 0px 10px 3px #c2c0c0; }
 
-@media screen and (min-width: 1024px) { .cards { height: 366px; width: 264px; } }
+@media screen and (min-width: 1024px) { .cards { height: 405px; width: 305px; } }
 
 .cards__note a > p:nth-of-type(1) { font-size: 1.6em !important; font-family: 'Devonshire-Regular'; color: #3d1319; margin-top: 0; }
 
@@ -62,19 +62,19 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
 
 .cards__chic { background: #fff5fe; }
 
-.cards__chic a > p:nth-of-type(1) { background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'CroissantOne-Regular'; text-align: center; font-size: 1.15em !important; }
+.cards__chic a > p:nth-of-type(1) { background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%); color: transparent; -webkit-background-clip: text; font-family: 'CroissantOne-Regular'; text-align: center; font-size: 1.15em !important; }
 
 .cards__chic a > p:nth-of-type(2) { font-family: 'Vinegar-Regular'; color: #c77412; }
 
 .cards__delice { background: #f9f9f9; }
 
-.cards__delice a > p:nth-of-type(1) { background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'DancingScript'; }
+.cards__delice a > p:nth-of-type(1) { background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%); color: transparent; -webkit-background-clip: text; font-family: 'DancingScript'; }
 
 .cards__delice a > p:nth-of-type(2) { font-family: 'SweetyStrawberry'; color: #0887fb; }
 
 .cards__palette { background: #fdfffd; }
 
-.cards__palette a > p:nth-of-type(1) { background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'KaushanScript-Regular'; }
+.cards__palette a > p:nth-of-type(1) { background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%); color: transparent; -webkit-background-clip: text; font-family: 'KaushanScript-Regular'; }
 
 .cards__palette a > p:nth-of-type(2) { font-family: 'SweetyStrawberry'; color: #72bf56; }
 
@@ -86,7 +86,7 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
 
 .cards a > p:nth-of-type(2) { font-size: 2em; }
 
-.cards a > .fab { font-size: 3em; background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; background-clip: text; }
+.cards a > .fab { font-size: 3em; background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; }
 
 .cards a > i { width: 45px; height: 45px; }
 
@@ -132,9 +132,9 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
 
 @media screen and (min-width: 640px) { .menu-note h3::after { width: 30%; } }
 
-.menu-note .i-note { background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; background-clip: text; font-size: 4rem; margin: 50px 0 0; }
+.menu-note .i-note { background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; font-size: 4rem; margin: 50px 0 0; }
 
-.menu-note .fab { background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; background-clip: text; margin-right: 10px; }
+.menu-note .fab { background: linear-gradient(to right, #f15d61, #f6916a); color: transparent; -webkit-background-clip: text; margin-right: 10px; }
 
 .soon { display: flex; justify-content: center; align-items: center; }
 
@@ -176,7 +176,7 @@ footer a { font-family: 'Archivoregular', sans-serif; font-size: 1.2rem; text-al
   .menu-chic .tarte { display: flex; justify-content: space-between; }
   .menu-chic .dessert p { text-align: left; } }
 
-.menu-chic h2 { background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'CroissantOne-Regular'; font-size: 1.8rem; margin: 50px 0 50px; }
+.menu-chic h2 { background: linear-gradient(135deg, #e38a12 0%, #9056ff 71%); color: transparent; -webkit-background-clip: text; font-family: 'CroissantOne-Regular'; font-size: 1.8rem; margin: 50px 0 50px; }
 
 .menu-chic p, .menu-chic h3 { font-family: 'Vinegar-Regular'; }
 
@@ -256,7 +256,7 @@ main { display: block; margin: 1rem 3% 8rem 3%; }
   .menu-delice .tarte { display: flex; justify-content: space-between; }
   .menu-delice .dessert p { text-align: left; } }
 
-.menu-delice h2 { background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'DancingScript'; font-size: 3.5rem; margin: 50px 0 50px; }
+.menu-delice h2 { background: linear-gradient(135deg, #0229dd 0%, #0e8cfb 100%); color: transparent; -webkit-background-clip: text; font-family: 'DancingScript'; font-size: 3.5rem; margin: 50px 0 50px; }
 
 .menu-delice h3, .menu-delice p { color: black; font-family: 'SweetyStrawberry'; letter-spacing: 1px; }
 
@@ -322,7 +322,7 @@ main { display: block; margin: 1rem 3% 8rem 3%; }
   .menu-palette .tarte { display: flex; justify-content: space-between; }
   .menu-palette .dessert p { text-align: left; } }
 
-.menu-palette h2 { background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%); color: transparent; -webkit-background-clip: text; background-clip: text; font-family: 'KaushanScript-Regular'; font-size: 3.5rem; margin: 50px 0 50px; }
+.menu-palette h2 { background: linear-gradient(135deg, #3e923a 0%, #beff7f 100%); color: transparent; -webkit-background-clip: text; font-family: 'KaushanScript-Regular'; font-size: 3.5rem; margin: 50px 0 50px; }
 
 .menu-palette h3, .menu-palette p { color: black; font-family: 'SweetyStrawberry'; letter-spacing: 1px; }
 

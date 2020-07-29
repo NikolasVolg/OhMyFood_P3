@@ -3,33 +3,8 @@
     background: linear-gradient($direct, $color1, $color2);
     color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
 }
 
-// @mixin degrade-note {
-//     background: linear-gradient(to right, $leftcolor, $rightcolor);
-//     color: transparent;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-// }
-// @mixin degrade-chic {
-//     background: linear-gradient(135deg, $chic-left 0%, $chic-right 71%);
-//     color: transparent;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-// }
-// @mixin degrade-delice {
-//     background: linear-gradient(135deg, $delice-left 0%, $delice-right 100%);
-//     color: transparent;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-// }
-// @mixin degrade-palette {
-//     background: linear-gradient(135deg, $palette-left 0%, $palette-right 100%);
-//     color: transparent;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-// }
 //------------------Mixin générales
 @mixin min-reset {
     height: 100%;
@@ -105,14 +80,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 305px;
-    width: 220px;
+    height: 345px;
+    width: 260px;
     margin: 20px;
     background: $color-note;
     @include boxshadow;
     @media screen and(min-width: 1024px) {
-        height: 366px;
-        width: 264px;
+        height: 405px;
+        width: 305px;
     }
 }
 
