@@ -1,20 +1,11 @@
-# Start OHMYFOOD Project 
+# Projet 3
 
-use node-sass 
+Formation développeur web avec OpenClassRooms
 
-## Project init
+## Objectifs
 
-In the project file, use `npm init` command 
-and `npm install --save-dev node-sass` command
+Produire le site MVP avec animation en CSS pour "OhMyFood", à partir d'une maquette donnée (format desktop).a1
 
-Create a scss file and css file
+## Procédé
 
-In package.json => scripts 
-
-`"transpile": "node-sass scss/mains.scss css/style.css",`
-`"watch": "node-sass scss/mains.scss css/style.css -w",`
-`"sass": "node-sass scss/mains.scss css/style.css -w --output-style=compact"`
-
-save and use `npm run sass` command.
-
-### You're ready for the code !
+découpage de la maquette par Photoshop, première mise en place des balises HTML. Installation de node-sass, utilisation du pattern 7-1 pour la construction du code Sass.
